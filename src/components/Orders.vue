@@ -73,8 +73,6 @@ export default {
     removeCount () {
       console.log('Praegune count:', this.count)
       this.count--
-
-      
     }
   }
 }
