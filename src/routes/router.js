@@ -9,7 +9,13 @@ export const routes = [
     path: '/orders',
     name: 'Tellimused',
     components: { default: Orders }
+  },
+  {
+    path: '/products',
+    name: 'Tooted',
+    components: { default: Products }
   }
+
 ]
 
 const router = new VueRouter({
