@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Orders from './../components/Orders'
-import Products from './../components/Products'
+import Orders from './../components/Orders';
+import Products from './../components/Products';
 
 Vue.use(VueRouter);
 

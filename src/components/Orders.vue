@@ -32,8 +32,6 @@
 </template>
 <script>
 import axios from 'axios'
-
-
 export default {
   name: 'Orders',
   data() {
@@ -41,7 +39,7 @@ export default {
       
       count: 0,
       
-      fields: ['orderID', 'toWhom', 'orderingDate', 'status', { key: 'price', label: 'Hind' }, 'actions'],
+      fields: [ {key:'orderID', label: 'Tellimuse ID'}, {key:'toWhom', label: 'Kellele'}, {key:'orderingDate', label: 'Tellimuse kp.'}, {key:'toCounty', label: 'Riik'}, {key:'toCity', label: 'Linn'},{key:'toStreet', label: 'Tänav'}, {key:'toHouse', label: 'Maja/korteri nr.'}, {key:'status', label: 'Staatus'},  'actions'],
       items: [],
       productFields: [],
       productItems: [],
@@ -55,9 +53,8 @@ export default {
       headers: {}
     })
     console.log('orders', orders)
-
+   
     this.items = orders.data.allOrders
-
   },
   methods: {
     showProducts (products, item) {
@@ -73,6 +70,7 @@ export default {
     removeCount () {
       console.log('Praegune count:', this.count)
       this.count--
+      
     }
   }
 }
